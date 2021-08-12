@@ -1,0 +1,1 @@
+<?php $nim = ”123”; $nama = ‘Ani; echo “NIM : “ . $nim . ”<br>”; echo “Nama : $nama”; ?>

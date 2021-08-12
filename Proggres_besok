@@ -1,0 +1,19 @@
+icon perbaiki halaman about
+
+<ul class="nav justify-content-center mt-4">
+<form action="kategori.php" method="get"></form>
+    <div class="btn-group mr-4">
+        <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Kategori Produk
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+        <!--MENAMPILKAN KATEGORI DARI DATABASE-->
+            <?php if (mysqli_num_rows($kat)){?>
+                <?php while ($rowkat = mysqli_fetch_array($kat)){ ?>
+                    <a href="kategori.php?kategori=<?= $rowkat['kategori'];?>" class="dropdown-item"><?= $rowkat['kategori'];?></a>
+                <?php } ?>
+            <?php } ?>
+        </div>
+    </div>
+</form>
+</ul>
